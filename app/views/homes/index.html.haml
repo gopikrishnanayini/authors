@@ -1,0 +1,64 @@
+- if current_user.blank?
+  = link_to "Login", new_user_session_path
+- else
+  !!!
+  %html{:lang => "en"}
+    %head
+      %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+      / Theme Made By www.w3schools.com - No Copyright
+      %title Indur Dental Lab
+      %meta{:charset => "utf-8"}/
+      %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+      %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :rel => "stylesheet"}/
+      %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"}
+      %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
+    %body
+      .container
+        #myCarousel.carousel.slide{"data-ride" => "carousel"}
+          / Indicators
+          %ol.carousel-indicators
+            %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+            %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+            %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+          / Wrapper for slides
+          .carousel-inner
+            .item.active
+              %img{:alt => "Los Angeles", :src => "/assets/Dentalslide1.jpg", :style => "width:100%;"}/
+              .carousel-caption
+                %p Smile, it lets your teeth breathe.
+            .item
+              %img{:alt => "Chicago", :src => "/assets/dental-lab-970x304.jpg", :style => "width:100%;"}/
+              .carousel-caption
+                %p A good dentist never gets on your nerves.
+            .item
+              %img{:alt => "New York", :src => "/assets/dental.jpg", :style => "width:100%;"}/
+              .carousel-caption
+                %p Life is short. Smile while you still have teeth.
+          / Left and right controls
+          %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
+            %span.glyphicon.glyphicon-chevron-left
+            %span.sr-only Previous
+          %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"}
+            %span.glyphicon.glyphicon-chevron-right
+            %span.sr-only Next
+      / Container (About Section)
+      .container-fluid
+        .row
+          .col-sm-8
+            %h2 About Company Page
+            %p The heart and soul of the company is creativity and innovation
+            =# link_to '<button type="button" class="btn btn-default btn-lg">ABOUT</button>'.html_safe, aboutus_path
+          .col-sm-4
+            %span.glyphicon.glyphicon-signal.logo
+      .container-fluid.bg-grey
+        .row
+          .col-sm-4
+            %span.glyphicon.glyphicon-globe.logo
+          .col-sm-8
+            %h2 Our Values
+            %h4
+              %strong> MISSION:
+              My mission in life is not merely to survive, but to thrive; and to do so with some passion, some compassion, some humor, and some style.
+            %h4
+              %strong VISION:
+              Gratitude makes sense of our past, brings peace for today, and creates a vision for tomorrow.
