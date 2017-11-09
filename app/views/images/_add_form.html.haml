@@ -1,0 +1,6 @@
+= form_for @image, enctype: 'multipart/form-data' do |f|
+  = f.file_field :photo
+  = f.text_field :body
+  = f.text_field :title
+  = f.submit 'Upload image'
+

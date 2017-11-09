@@ -1,0 +1,5 @@
+- @image.each do |image|
+  %tr
+    %td= link_to 'Destroy', image_path(:id => image.id), :confirm => 'Are you sure?', :method => :delete
+    %td= image_tag image.photo.url, :size => "300x300"
+    = link_to "New Image", new_image_path, :class => "btn btn-success"
